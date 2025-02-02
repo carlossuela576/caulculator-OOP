@@ -1,13 +1,16 @@
+import Operation.operations;
 import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        operations op = new operations();
         
         do { 
             //starting prompt & operation choice input
+            System.out.println();
             startingPrompts();
-            String operation = sc.nextLine().toLowerCase();
+            String operationChoice = sc.nextLine().toLowerCase();
 
             //two number input
             operationPrompt();
@@ -15,13 +18,24 @@ public class Main{
             int x = sc.nextInt();
             System.out.print("Enter second number: ");
             int y = sc.nextInt();
+            sc.nextLine();
+            System.out.println();
 
             //call operation methods
-            switch (operation) {
+            switch (operationChoice) {
                 case "add":
-                    
+                    System.out.println(op.add(x, y));
+
                     break;
-                
+                case "subtract":
+                    System.out.println(op.subtract(x, y));
+                    break;
+                case "multiply":
+                    System.out.println(op.multiply(x, y));
+                    break;
+                case "divide":
+                    System.out.println(op.divide(x, y));
+                    break;
                 default:
                     throw new AssertionError();
             }
@@ -34,7 +48,7 @@ public class Main{
         System.out.println("Welcome to calculator");
         System.out.println("Please select an operation");
         System.out.println("----------------------------");
-        System.out.println("Add \n Multiply \n Subtract \n Divide");
+        System.out.println("Add \nSubtract \nMultiply \nDivide");
     }
 
     static void operationPrompt(){
