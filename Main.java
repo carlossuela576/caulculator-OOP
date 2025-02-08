@@ -15,9 +15,9 @@ public class Main{
             //two number input
             operationPrompt();
             System.out.print("Enter first number: ");
-            int x = sc.nextInt();
+            double x = sc.nextDouble();
             System.out.print("Enter second number: ");
-            int y = sc.nextInt();
+            double y = sc.nextDouble();
             sc.nextLine();
             System.out.println();
 
