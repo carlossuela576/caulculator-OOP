@@ -17,8 +17,13 @@ public class operations {
         return product;
     }
 
-    public float divide(int a, int b){
+    public int divide(int a, int b){
         int quo = a / b;
+        return quo;
+    }
+//method overload (doesn't work)
+    public double divide(double a, double b){
+        double quo = a / b;
         return quo;
     }
 }
