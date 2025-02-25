@@ -1,10 +1,10 @@
 import Operation.operations;
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        operations op = new operations();
         
         do { 
             //starting prompt & operation choice input
@@ -24,20 +24,19 @@ public class Main{
             //call operation methods
             switch (operationChoice) {
                 case "add":
-                    System.out.println(op.add(x, y));
-
+                    System.out.println(operations.add(x, y));
                     break;
                 case "subtract":
-                    System.out.println(op.subtract(x, y));
+                    System.out.println(operations.subtract(x, y));
                     break;
                 case "multiply":
-                    System.out.println(op.multiply(x, y));
+                    System.out.println(operations.multiply(x, y));
                     break;
                 case "divide":
-                    System.out.println(op.divide(x, y));
+                    System.out.println(operations.divide(x, y));
                     break;
                 default:
-                    throw new AssertionError();
+                    throw new InputMismatchException("must provide correct operation input");
             }
         } while (true);
 
