@@ -12,6 +12,10 @@ public class Main{
             startingPrompts();
             String operationChoice = sc.nextLine().toLowerCase();
 
+            //ask for integer or decimal
+            //dynamic.java class
+            //switch case for input
+
             //two number input
             operationPrompt();
             System.out.print("Enter first number: ");
