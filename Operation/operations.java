@@ -18,6 +18,9 @@ public class operations {
     }
 
     public static double divide(double a, double b){
+        if(a == 0 || b == 0){
+            throw new ArithmeticException("Can't divide by zero");
+        }
         double quo = a / b;
         return quo;
     }

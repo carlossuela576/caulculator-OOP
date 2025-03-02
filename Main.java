@@ -1,5 +1,4 @@
 import Operation.operations;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main{
@@ -36,7 +35,16 @@ public class Main{
                     System.out.println(operations.divide(x, y));
                     break;
                 default:
-                    throw new InputMismatchException("must provide correct operation input");
+                    try {
+                        System.out.println("Your first number is " + x + " and your second number is " + y);
+                        System.out.println("Make sure to enter the correct inputs");
+                    } catch (Exception e) {
+                        // TODO: handle exception
+                        throw new ArithmeticException("Ensure correct inputs");
+                    }
+                    finally{
+                        System.out.println("try catch executed");
+                    }
             }
         } while (true);
 
