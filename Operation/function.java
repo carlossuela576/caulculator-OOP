@@ -45,9 +45,9 @@ public class function {
             }
         } while (true);
         /* for some unknown reason this method generates an error when the functions
-         * are put outside the do-while loop. Return keywords cannot be seen a return
-         * values - only the gods know why does that happen. DON'T PUT THE FUNCTIONS 
-         * OUT OF THE DO - WHILE LOOP.
+         * are put outside the do-while loop. Return keywords cannot be seen as return
+         * values - only the gods initially know why does that happen. at all costs - 
+         * DON'T PUT THE FUNCTIONS OUT OF THE DO - WHILE LOOP.
          */
     }
 

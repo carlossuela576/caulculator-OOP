@@ -19,7 +19,12 @@ public class operations {
 
     public static double divide(double a, double b){
         if(a == 0 || b == 0){
-            throw new ArithmeticException("Can't divide by zero");
+            try {
+                System.out.println("Can't divide by zero");
+            } catch (ArithmeticException e) {
+                // TODO: handle exception
+                throw new ArithmeticException("Input error: please try again");
+            }
         }
         double quo = a / b;
         return quo;
